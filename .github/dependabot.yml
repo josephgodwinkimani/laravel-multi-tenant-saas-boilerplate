@@ -1,0 +1,28 @@
+# To get started with Dependabot version updates, you'll need to specify which
+# package ecosystems to update and where the package manifests are located.
+# Please see the documentation for all configuration options:
+# https://docs.github.com/code-security/dependabot/dependabot-version-updates/configuration-options-for-the-dependabot.yml-file
+
+version: 2
+updates:
+    - package-ecosystem: composer
+      directory: '/' # Location of package manifests
+      schedule:
+          interval: 'weekly'
+          # Check for npm updates on Sundays
+          day: 'sunday'
+          time: '09:00'
+          # Use Madrid Standard Time (UTC +01:00)
+          timezone: 'Africa/Nairobi'
+      # Raise pull requests for version updates
+      # to pip against the `develop` branch
+      target-branch: 'main'
+      # Add assignees
+      assignees:
+          - 'josephgodwinkimani'
+      commit-message:
+          # Prefix all commit messages with "pnpm"
+          prefix: 'composer'
+      # Add reviewers
+      reviewers:
+          - 'josephgodwinkimani'
